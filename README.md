@@ -4,7 +4,9 @@
 
 
 ## 플레이 영상
-
+* https://www.youtube.com/watch?v=_T1n5qXT2II
+  
 ## 구현한 기능
-
+* AI 몬스터 구현
+  * 무기 시스템
 ## 사용 기술
