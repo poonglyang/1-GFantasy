@@ -4,7 +4,8 @@
 
 
 ## 플레이 영상
-* https://www.youtube.com/watch?v=_T1n5qXT2II
+* AI 파트 - https://youtu.be/DvCc0_7JDXU
+* 전체 플레이 흐름 - https://www.youtube.com/watch?v=_T1n5qXT2II
   
 ## 구현한 기능
 * AI 몬스터 구현
