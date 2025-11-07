@@ -847,7 +847,6 @@ void AGASCombatNPC::DissolveEnemyStateWidget_Implementation()
 			0.03f,
 			true
 		);
-		//EnemyStateWidget->CollapsedMode();
 	}
 }
 
@@ -890,11 +889,11 @@ void AGASCombatNPC::StateWidgetDissolveLoop()
 				FMath::Lerp(
 					EnemyStateWidgetComponent->GetWidget()->GetRenderOpacity()
 					, 0
-					, WidgetDissolveElapsedTime / 1.5f
+					, WidgetDissolveElapsedTime / WidgetDissolveTime
 					)
 				);
 
-	if (WidgetDissolveElapsedTime >= 1.5f)
+	if (WidgetDissolveElapsedTime >= WidgetDissolveTime)
 	{
 		GetWorld()->GetTimerManager().ClearTimer(WidgetDissolveTimerHandle);
 		EnemyStateWidgetComponent->GetWidget()->SetVisibility(ESlateVisibility::Hidden);

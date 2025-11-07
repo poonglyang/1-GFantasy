@@ -63,10 +63,10 @@ void ANormalEnemyBase::Tick(float DeltaTime)
 
 #if WITH_EDITOR
 	// 회전 방향 (보통 파란색)
-	DrawDebugDirectionalArrow(GetWorld(), ActorLocation, ActorLocation + ForwardVector * 300, 100.f, FColor::Blue, false, -1.f, 0, 3.f);
+	//DrawDebugDirectionalArrow(GetWorld(), ActorLocation, ActorLocation + ForwardVector * 300, 100.f, FColor::Blue, false, -1.f, 0, 3.f);
 
 	// 이동 방향 (보통 빨간색)
-	DrawDebugDirectionalArrow(GetWorld(), ActorLocation, ActorLocation + VelocityDir * 300, 100.f, FColor::Red, false, -1.f, 0, 3.f);
+	//DrawDebugDirectionalArrow(GetWorld(), ActorLocation, ActorLocation + VelocityDir * 300, 100.f, FColor::Red, false, -1.f, 0, 3.f);
 
 #endif
 }
@@ -84,7 +84,6 @@ void ANormalEnemyBase::AreaCollisionBeginOverlap(UPrimitiveComponent* Overlapped
 			ClientWidgetVisible(ESlateVisibility::Visible);
 		}
 	}
-	
 }
 
 
@@ -225,13 +224,9 @@ void ANormalEnemyBase::ClientWidgetVisible_Implementation(ESlateVisibility Visib
 
 	if (EnemyStateWidgetComponent && EnemyStateWidgetComponent->GetWidget())
 	{
-		//EnemyStateWidgetComponent->GetWidget()->SetVisibility(VisibleMode);
-		//EnemyStateWidgetComponent->GetWidget()->SetRenderOpacity(1);
-
 		if (VisibleMode == ESlateVisibility::Visible)
 		{
 			GetWorld()->GetTimerManager().ClearTimer(WidgetDissolveTimerHandle);
-			//EnemyStateWidgetComponent->GetWidget()->SetRenderOpacity(1);
 			EnemyStateWidgetComponent->SetVisibility(true);
 			EnemyStateWidgetComponent->GetWidget()->SetRenderOpacity(1);
 			EnemyStateWidgetComponent->GetWidget()->SetVisibility(VisibleMode);

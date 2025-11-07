@@ -73,25 +73,22 @@ void UGASBossGroggy::PostGameplayEffectExecute(const FGameplayEffectModCallbackD
 			OnExtraGaugeFull.Broadcast();
 			FGameplayEventData EventData;
 			EventData.EventTag = FGameplayTags::Get().Enemy_Boss_ExtraGaugeFull;
-			//EventData.Instigator = MeshComp->GetOwner();
-			//EventData.Target = MeshComp->GetOwner();
 
 			GetOwningAbilitySystemComponent()->HandleGameplayEvent(FGameplayTags::Get().Enemy_Boss_ExtraGaugeFull, &EventData);
 		}
 	}
 
 	if (Data.EvaluatedData.Attribute == GetExtraGaugeAttribute()) {
-		SetExtraGauge(FMath::Clamp(GetExtraGauge(), 0.f, GetMaxExtraGauge()));	// 다시 Clamp했다
+		SetExtraGauge(FMath::Clamp(GetExtraGauge(), 0.f, GetMaxExtraGauge()));
 
 		if (GetExtraGauge() == GetMaxExtraGauge())
 		{
 			OnExtraGaugeFull.Broadcast();
 			FGameplayEventData EventData;
 			EventData.EventTag = FGameplayTags::Get().Enemy_Boss_ExtraGaugeFull;
-			//EventData.Instigator = MeshComp->GetOwner();
-			//EventData.Target = MeshComp->GetOwner();
 
-			GetOwningAbilitySystemComponent()->HandleGameplayEvent(FGameplayTags::Get().Enemy_Boss_ExtraGaugeFull, &EventData);
+			GetOwningAbilitySystemComponent()
+				->HandleGameplayEvent(FGameplayTags::Get().Enemy_Boss_ExtraGaugeFull, &EventData);
 		}
 	}
 }

@@ -50,7 +50,6 @@ void AEnemySpawner::Spawn()
 	if (NavSys && NavSys->GetRandomReachablePointInRadius(GetActorLocation(), SpawnRange, RandomLocation))
 	{
 		// 스포너 기준 SpawnRange 반경 안에 랜덤으로 소환 가능한 위치가 있으면
-
 		FVector SpawnLocation = FVector(RandomLocation.Location.X, RandomLocation.Location.Y, RandomLocation.Location.Z+90);
 		
 		const FTransform Transform(FRotator(0,FMath::RandRange(0.f, 360.f), 0), SpawnLocation);
@@ -77,6 +76,8 @@ void AEnemySpawner::Spawn()
 			}
 			SpawnEnemy->OnCombatNPCDie.AddDynamic(this, &AEnemySpawner::OnSpawnedActorDied);
 			SpawnEnemy->FinishSpawning(SpawnEnemy->GetTransform());
+
+			UE_LOG(LogTemp, Log, TEXT("%s 소환에 성공함"), *SpawnEnemy->GetName());
 		}
 	}
 	else

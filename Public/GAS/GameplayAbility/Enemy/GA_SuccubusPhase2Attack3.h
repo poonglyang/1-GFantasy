@@ -15,11 +15,13 @@ class GFANTASY_API UGA_SuccubusPhase2Attack3 : public UGA_EndDelegateBase
 	GENERATED_BODY()
 
 protected:
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="SuccubusPhase2Attack3")
 	FVector GetAttackSpawnLocation(int Count);
 
 protected:
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="BossAbility")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="SuccubusPhase2Attack3")
 	float AttackDecalDistance = 700.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="SuccubusPhase2Attack3")
+	float NoiseValue = 200.f;
 };

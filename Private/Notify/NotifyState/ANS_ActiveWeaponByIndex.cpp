@@ -21,13 +21,12 @@ void UANS_ActiveWeaponByIndex::NotifyBegin(USkeletalMeshComponent* MeshComp, UAn
 		{
 			Owner->WeaponArr[WeaponIndex]->AttackEffectIndex = AttackEffectIndex;
 			Owner->WeaponArr[WeaponIndex]->SetCollisionActive();	// 무기 콜리전 켜기
-			Owner->WeaponArr[WeaponIndex]->ClearHitActorsArr();	// 기존 쳐 맞은 사람 배열 제거
+			Owner->WeaponArr[WeaponIndex]->ClearHitActorsArr();	// 기존 맞은 사람 배열 제거
 			
 		}
 		else
 		{
 			UE_LOG(LOG_ANS_ActiveWeaponByIndex, Warning, TEXT("No Weapon In Arr Index %d"), WeaponIndex);
-			//UKismetSystemLibrary::PrintString(this, TEXT("무기 없음"));
 		}
 	}
 }

@@ -41,7 +41,7 @@ void UBTT_DetectFocusActorByTick::TickTask(UBehaviorTreeComponent& OwnerComp, ui
 			ObjectTypes,
 			false,
 			ActorsToIgnore,
-			EDrawDebugTrace::None,
+			EDrawDebugTrace::ForDuration,
 			HitResults,
 			true,
 			FLinearColor::Red,

@@ -15,11 +15,11 @@ FVector UGA_SuccubusPhase2Attack3::GetAttackSpawnLocation(int Count)
 
 	if (Count % 2 == 0)
 	{
-		Noise = -200.f;
+		Noise = -NoiseValue;
 	}
 	else
 	{
-		Noise = 200.f;
+		Noise = NoiseValue;
 	}
 	
 	// 소환 위치(현재 위치 + (앞방향 * 거리 * 소환 개수) + 

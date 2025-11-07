@@ -20,8 +20,15 @@ void UBTT_WerewolfDetected::DetectedFocusActor(AAIControllerBase* Owner, AActor*
 		&& IsValid(Owner->CurrentPatternTimerTask)
 		&& Owner->HasAuthority())
 	{
-		Owner->CurrentPatternTimerTask->EndTask();
-		Owner->GetBlackboardComponent()->SetValueAsBool(FName("bChachKillPatternSuccess"), true);
+		Owner
+			->CurrentPatternTimerTask
+			->EndTask();
+		
+		Owner->GetBlackboardComponent()
+			->SetValueAsBool(
+			FName("bChachKillPatternSuccess"),
+			true
+		);
 	}
 	
 }

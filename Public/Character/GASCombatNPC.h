@@ -380,6 +380,9 @@ protected:
 	UPROPERTY()
 	float WidgetDissolveElapsedTime = 0;
 
+	UPROPERTY()
+	float WidgetDissolveTime = 1.5f;
+	
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "CombatNPC")
 	bool bIsSpawnBySpawner = false;

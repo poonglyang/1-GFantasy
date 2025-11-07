@@ -45,8 +45,9 @@ public:
 	void TimelineInProgress(float Value);
 
 	void TimelineComplete();
-	
-protected:
 
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "BossSuccubus")
+	FVector GetArmSocketLocation();
+	
 	
 };

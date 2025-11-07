@@ -22,7 +22,6 @@ void UEnemyHealthBarWidget::NativeConstruct()
 
 void UEnemyHealthBarWidget::SetHealth(float NewHealth)
 {
-
 	if (NewHealth == 0 && Health != NewHealth)
 	{
 		Health = NewHealth;
@@ -47,7 +46,6 @@ void UEnemyHealthBarWidget::SetHealth(float NewHealth)
 	{
 		if (HealthProgressBar)
 		{
-			//HealthProgressBar->SetWidgetStyle(HitProgressBarStyle);
 			OldHealthBack = HealthBack;
 			GetWorld()->GetTimerManager().ClearTimer(HealthHitTimer);
 			GetWorld()->GetTimerManager().ClearTimer(HealthHitLerpTimer);

@@ -45,7 +45,6 @@ EBTNodeResult::Type UBTTAbilityToOwner::ExecuteTask(UBehaviorTreeComponent& Owne
 			{
 				if (Spec.Ability && Spec.Ability->AbilityTags.HasTagExact(AbilityTag))
 				{
-					// 이 Spec은 원하는 태그를 가진 어빌리티입니다
 					FGameplayAbilitySpecHandle FoundHandle = Spec.Handle;
 					UAbilitySystemComponent* CurrentACS =  CurrentPawn->GetAbilitySystemComponent();
 					CurrentACS->TryActivateAbility(FoundHandle);
