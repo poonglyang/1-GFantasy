@@ -1,18 +1,15 @@
-# 1. 프로젝트 개요
+# GFantasy - Unreal Engine 프로젝트
+
+## 📋 프로젝트 개요
+
 * 팀으로 진행한 MMORPG를 구현 프로젝트입니다
 * GAS기반 시스템과 AI 몬스터를 담당하였습니다
 * Unreal 5.4로 제작하였습니다
 * 개발 기간 2025.04.19 - 2025.06.24
 
-# 2. 플레이 영상
+## 2. 플레이 영상
 * AI 파트 - https://youtu.be/DvCc0_7JDXU
 * 전체 플레이 흐름 - https://www.youtube.com/watch?v=_T1n5qXT2II
-  
-# GFantasy - Unreal Engine 프로젝트
-
-## 📋 프로젝트 개요
-
-GFantasy는 Unreal Engine 5를 기반으로 한 액션 RPG 게임 프로젝트입니다. Gameplay Ability System(GAS)을 활용한 스킬 시스템과 Behavior Tree 기반 NPC AI 시스템을 구현한 멀티플레이어 게임입니다.
 
 ## 📁 프로젝트 구조
 
