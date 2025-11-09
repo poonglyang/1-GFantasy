@@ -253,13 +253,9 @@ GASCombatNPC (전투 NPC)
 - [Gameplay Ability System 문서](https://github.com/tranek/GASDocumentation)
 - [Unreal Engine Behavior Tree 가이드](https://docs.unrealengine.com/en-US/InteractiveExperiences/ArtificialIntelligence/BehaviorTrees/)
 
-## 📄 라이선스
-
-이 프로젝트는 Unreal Engine의 표준 라이선스를 따릅니다.
-
 ---
 
 **작성일**: 2024  
-**엔진 버전**: Unreal Engine 5.x  
+**엔진 버전**: Unreal Engine 5.4.4
 **언어**: C++
 
